@@ -10,7 +10,9 @@
   },
   "dependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.4.3",
+    "yarn": "^1.22.19"
   },
   "devDependencies": {
     "@types/react": "^18.0.24",
@@ -20,6 +22,8 @@
     "@vitejs/plugin-react": "^2.2.0",
     "autoprefixer": "^10.4.13",
     "eslint": "^8.28.0",
+    "eslint-import-resolver-typescript": "^3.5.2",
+    "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.31.11",
     "postcss": "^8.4.19",
     "prettier": "^2.7.1",
