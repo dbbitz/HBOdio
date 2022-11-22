@@ -4,7 +4,20 @@ module.exports = {
   theme: {
     extend: {
         backgroundImage: {
-             
+            desktop: {
+                backgroundHome: './src/assets/images/backgroundGOT.png',
+            },
+            mobile: {
+                backgroundHome: './src/assets/images/background-mobile-GOT.png'
+            },
+            banners: {
+                got: './src/assets/images/banners/got.png',
+                roma: './src/assets/images/banners/roma.png',
+                sixFeetUnder: './src/assets/images/banners/sixFeetUnder.png',
+                sucession: './src/assets/images/banners/sucession.png',
+                trueDetective: './src/assets/images/banners/trueDetective.png',
+                sopranos: './src/assets/images/banners/sopranos.png',
+            }
         },
         backgroundColor: {
             body: {
