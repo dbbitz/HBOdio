@@ -31,7 +31,7 @@ module.exports = {
                     200: "#8D7DF1",
                     300: "#02021C",
                 },
-                input: {},
+                input: '#110B1B',
                 btn: {
                     primary: {
                         base: "#B535F6",
