@@ -1,9 +1,11 @@
-import { CircleNotch } from 'phosphor-react'
+import { CircleNotch } from 'phosphor-react';
+import { MouseEventHandler } from 'react';
 
 interface PropTypes {
   label: string;
   category: 'primary' | 'secondary';
-  className?: string; 
+  onClick?: MouseEventHandler;
+  className?: string;
   loading?: boolean;
   disbled?: boolean;
 }
@@ -18,7 +20,14 @@ interface PropTypes {
  * Author: @dbbitz
  */
 
-export const Button = ({ label, category, className, loading, disbled }: PropTypes) => {
+export const Button = ({
+  label,
+  category,
+  onClick,
+  className,
+  loading,
+  disbled,
+}: PropTypes) => {
   return (
     <>
       {category === 'primary' && (
@@ -26,8 +35,9 @@ export const Button = ({ label, category, className, loading, disbled }: PropTyp
           className={`bg-btn-primary-base hover:bg-btn-primary-hover text-title
                ${className} flex justify-center
               items-center min-w-[100px]`}
+          onClick={onClick}
         >
-          {loading ? <CircleNotch size={12} className='animate-spin'/> : label}
+          {loading ? <CircleNotch size={12} className="animate-spin" /> : label}
         </button>
       )}
       {category === 'secondary' && (
@@ -35,8 +45,9 @@ export const Button = ({ label, category, className, loading, disbled }: PropTyp
           className={`bg-btn-secondary-base hover:bg-btn-secondary-hover text-title 
           ${className} flex justify-center
          items-center min-w-[100px]`}
+          onClick={onClick}
         >
-          {loading ? <CircleNotch size={12} className='animate-spin'/> : label}
+          {loading ? <CircleNotch size={12} className="animate-spin" /> : label}
         </button>
       )}
     </>

@@ -1,8 +1,11 @@
+import { useNavigate } from 'react-router-dom';
+
 import { Button } from '../../components/Button';
 import { List } from 'phosphor-react';
 import { Input } from '../../components/Input';
 
 export const Login = () => {
+    const navigate = useNavigate();
   return (
     <>
       <header className="bg-brand-300 w-full h-[51px] flex justify-between items-center gap-2.5 p-3">
@@ -29,11 +32,11 @@ export const Login = () => {
             <span className="text-paragraph text-xs">
               Você tem uma conta da HBO Max?
             </span>
-            <Input category="email" className="" />
-            <Input category="password" className="" />
+            <Input category="email" label="Endereço de e-mail" className="" />
+            <Input category="password" label="Senha" className="" />
           </div>
           <div className="flex flex-row justify-between items-start gap-10">
-            <Button label="ENTRAR" category="secondary" className='py-2.5 px-5 rounded text-xs font-medium ' />
+            <Button onClick={() => navigate('/catalog')} label="ENTRAR" category="secondary" className='py-2.5 px-5 rounded text-xs font-medium ' />
             <span className='text-brand-200 text-xs flex items-center h-full'>Esqueceu a senha?</span>
           </div>
         </div>

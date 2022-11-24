@@ -1,12 +1,15 @@
+import { useNavigate } from "react-router-dom";
+
 import { Button } from "../../components/Button";
 
 export const Home = () => {
+    const navigate = useNavigate()
     return (
       <>
         <header className="bg-brand-300 w-full h-[51px] flex justify-between items-center gap-2.5 p-3">
-          <div className="bg-logo w-[46px] h-[15px] md:w-[92px] md:h-[30px] bg-cover" />
+          <div className="bg-banner-logo w-[46px] h-[15px] md:w-[92px] md:h-[30px] bg-cover" />
           <div className="flex flex-row justify-center gap-5 items-center">
-            <span className="text-title text-xs md:text-sm">ENTRAR</span>
+            <span className="text-title text-xs md:text-sm cursor-pointer" onClick={() => navigate('/login')}>ENTRAR</span>
             <Button label="ASSINE AGORA" category="primary" className="text-xs px-3 py-2 rounded-3xl tracking-widest"/>
           </div>
         </header>
