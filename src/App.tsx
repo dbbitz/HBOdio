@@ -1,31 +1,22 @@
-import { useState } from 'react'
+import { Router } from './routes/routes';
+import { BrowserRouter } from 'react-router-dom';
+import './styles/global.css';
+
+/* O react-router-dom é uma biblioteca padrão para que você consiga fazer o roteamento das páginas da sua aplicação de forma dinâmica.*/
+
+/* BrowserRouter: Todas as rotas precisam estar declaradas dentro desse escopo, ou seja, nenhuma outra rota poderá ser acessada se não
+   tiver sido declarada aqui. Lembrando que há apenas uma declaração de BrowserRouter no projeto. Como o nome é muito extenso, é normal 
+   no import deste componente ser utilizado o as Router. */
+
+/* Router é um componente que deve ser utilizado para envolver a aplicação inteira. Ele é responsável por
+    fornecer a aplicação com as funcionalidades de navegação. */
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
-  )
+    <BrowserRouter>
+      <Router />
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
